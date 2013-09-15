@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flexbox form</title>
+	<style>
+	form{
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-flow: row wrap;
+	    flex-flow: row wrap;
+	    
+	    width: 408px;
+	    background: lightblue;
+	}
+	label {
+	    display: block;
+	    width: 150px;
+	}
+	input, textarea {
+	    width: 250px;
+	    margin-bottom: 7px;
+	}
+	textarea {
+	    height: 150px;
+	}
+	input[type=submit] {
+	    width: auto;
+	}
+	</style>
+</head>
+<body>
+<h1>Example form layout using flexbox</h1>
+
+<form>
+<label for="name">Name:</label> <input id="name" type="text" />
+<label for="email">Email:</label> <input id="email" type="email" />
+<label for="website">Website:</label> <input id="website" type="url" />
+<label for="comments">Comment:</label> <textarea id="comment"></textarea>
+<input type="submit" value="Comment" />
+</form>
+
+</body>
+</html>

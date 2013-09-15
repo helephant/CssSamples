@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latest items</title>
+	<style type="text/css">
+	.latest-items {
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-flow: row wrap;
+	    flex-flow: row wrap;
+
+	    width: 650px;
+	}
+	
+	.latest-item {
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-flow: column;
+	    flex-flow: column;
+	    
+	    padding: 14px;
+	    width: 255px;
+	}
+	.latest-item img {
+	    /*margin: 0 auto;*/
+	    -webkit-align-self: center;
+	    align-self: center;
+	}
+	</style>
+</head>
+<body>
+<h1>Nested flex containers</h1>
+
+<p>This example nests flex containers to create a set of equal sized boxes.</p>
+
+<p>Notice that the inner flex containers all have the same height, even though the height of the 
+content differs.</p>
+
+<div class="latest-items">
+    <div class="latest-item">
+        <img src="img/news.jpg">
+        <h2>Using CSS3 multi-column layouts to split a list into columns</h2>
+        <div class="summary">How to use the new CSS multi-column layout feature to split a list across 
+        multiple columns.</div>
+    </div>
+    <div class="latest-item">
+        <img src="img/tjg-logo.png">
+        <h2>Are you a developer who likes to learn new things?</h2>
+        <div class="summary">Totaljobs is hiring .NET developers and senior .NET developers. Central 
+        London. Agile teams. C#, TDD, MVC, twice weekly releases.</div>
+    </div>
+    <div class="latest-item">
+        <img src="img/ants.jpg">
+        <h2>Web debugging on windows</h2>
+        <div class="summary">Some tools and techniques that make it much easier to debug what your 
+        wayward application is doing.</div>
+    </div>
+    <div class="latest-item">
+        <img src="img/lego-star-wars.jpg">
+        <h2>Javascript function declarations vs function operators</h2>
+        <div class="summary">A look at the differences between the javascript function declaration 
+        and the function operator syntax.</div>
+    </div>
+</div>
+
+</body>
+</html>

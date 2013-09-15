@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>alignment</title>
+	<style type="text/css">
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    
+        width: 550px;
+        height: 400px;
+        background: lightgrey;
+    }
+
+    .flex-item {
+        width: 150px;
+        height: 150px;
+        
+        background: hotpink;
+        border: 1px red solid;
+    }
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	    var container = $(".flex-container");
+	    $(".alignment-selector").change(function() {
+	        container.css(this.id, $(this).val());
+	    });
+	});
+	</script>
+</head>
+<body>
+<h1>Flex alignment options</h1>
+
+<p>
+Justify content:
+<select id="justify-content" class="alignment-selector">
+    <option>flex-start</option>
+    <option>flex-end</option>
+    <option>center</option>
+    <option>space-between</option>
+    <option>space-around</option>
+</select>
+(main axis alignment)
+</p>
+
+<p>
+Align items:
+<select id="align-items" class="alignment-selector">
+    <option>flex-start</option>
+    <option>flex-end</option>
+    <option>center</option>
+    <option>baseline</option>
+    <option>stretch</option>
+</select>
+(cross axis alignment - within a line)
+</p>
+
+<p>
+Align content:
+<select id="align-content" class="alignment-selector">
+    <option>flex-start</option>
+    <option>flex-end</option>
+    <option>center</option>
+    <option>space-between</option>
+    <option>space-around</option>
+    <option>stretch</option>
+</select>
+(cross axis alignment - how to pack the lines themselves)
+</p>
+
+<div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+</div>
+
+</body>
+</html>
